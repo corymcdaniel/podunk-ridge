@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { checkPassword, createSessionToken, SESSION_COOKIE, SESSION_MAX_AGE_SECONDS } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request) {
   const body = await request.json().catch(() => ({}));
   if (!checkPassword(body.password)) {

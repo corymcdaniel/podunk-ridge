@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { postsStore } from "@/lib/blobStores";
 import { requireAdmin } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request, { params }) {
   const store = postsStore();
   const post = await store.get(`post:${params.slug}`, { type: "json" });

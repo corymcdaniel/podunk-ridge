@@ -11,6 +11,8 @@ function slugify(title) {
   return `${base || "post"}-${Date.now().toString(36)}`;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const store = postsStore();
   const index = (await store.get("index", { type: "json" })) || [];

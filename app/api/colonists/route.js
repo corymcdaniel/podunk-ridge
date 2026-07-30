@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { colonistsStore, DEFAULT_COLONISTS } from "@/lib/blobStores";
 import { requireAdmin } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const store = colonistsStore();
   const list = (await store.get("list", { type: "json" })) ?? DEFAULT_COLONISTS;

@@ -4,6 +4,8 @@ import { requireAdmin } from "@/lib/auth";
 
 const MAX_BYTES = 8 * 1024 * 1024; // 8MB
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request) {
   const authed = await requireAdmin(request);
   if (!authed) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

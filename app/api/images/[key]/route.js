@@ -1,5 +1,7 @@
 import { imagesStore } from "@/lib/blobStores";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request, { params }) {
   const store = imagesStore();
   const result = await store.getWithMetadata(params.key, { type: "arrayBuffer" });

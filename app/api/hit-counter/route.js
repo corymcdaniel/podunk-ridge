@@ -5,6 +5,8 @@ import { metaStore } from "@/lib/blobStores";
 // heavy simultaneous traffic a handful of increments could race and be lost.
 // For a personal colony blog that's a fine trade-off for zero infrastructure.
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const store = metaStore();
   const hits = (await store.get("hits", { type: "json" })) || 0;

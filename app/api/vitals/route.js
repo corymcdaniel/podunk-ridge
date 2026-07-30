@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { metaStore, DEFAULT_VITALS } from "@/lib/blobStores";
 import { requireAdmin } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const store = metaStore();
   const vitals = (await store.get("vitals", { type: "json" })) ?? DEFAULT_VITALS;

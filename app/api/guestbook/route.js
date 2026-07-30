@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { guestbookStore } from "@/lib/blobStores";
 import { requireAdmin } from "@/lib/auth";
 
+export const dynamic = "force-dynamic";
+
 export async function GET() {
   const store = guestbookStore();
   const entries = (await store.get("entries", { type: "json" })) || [];
