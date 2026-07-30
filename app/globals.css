@@ -1,0 +1,249 @@
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px 0;
+  background-color: #3a2a1c;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, rgba(230,200,150,0.25), transparent),
+    radial-gradient(1px 1px at 60px 70px, rgba(230,200,150,0.2), transparent),
+    radial-gradient(1px 1px at 130px 20px, rgba(230,200,150,0.25), transparent),
+    radial-gradient(2px 2px at 90px 110px, rgba(193,80,46,0.3), transparent),
+    radial-gradient(1px 1px at 160px 90px, rgba(230,200,150,0.2), transparent),
+    radial-gradient(1px 1px at 30px 140px, rgba(230,200,150,0.25), transparent),
+    linear-gradient(180deg, #4a3320 0%, #2b1d14 100%);
+  background-size: 200px 180px, 200px 180px, 200px 180px, 200px 180px, 200px 180px, 200px 180px, 100% 100%;
+  font-family: "Times New Roman", Times, serif;
+  color: #d9b878;
+  font-size: 16px;
+}
+
+a { color: #d9a441; }
+a:hover { color: #f2e0b8; }
+
+hr.stars {
+  border: none;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, #c1502e 0 4px, transparent 4px 8px);
+  margin: 0;
+}
+
+/* ===== outer page shell ===== */
+.pr-shell {
+  width: 780px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: #3a2b1e;
+  border: 4px ridge #8a6a42;
+  padding: 0;
+}
+
+/* ===== marquee ticker ===== */
+.pr-ticker {
+  background: #1c130c;
+  color: #d9a441;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  padding: 4px 0;
+  border-bottom: 2px solid #c1502e;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* ===== header banner ===== */
+.pr-banner {
+  text-align: center;
+  padding: 18px 10px 10px 10px;
+  background: repeating-linear-gradient(180deg, #4a3320, #4a3320 6px, #3c2917 6px, #3c2917 12px);
+  border-bottom: 3px double #c1502e;
+}
+.pr-banner h1 {
+  font-family: "Courier New", monospace;
+  font-size: 40px;
+  letter-spacing: 3px;
+  margin: 0;
+  color: #e8cd94;
+  text-shadow: 2px 2px 0 #c1502e, -1px -1px 0 #1c130c, 0 0 12px #d9a441;
+}
+.pr-banner a { text-decoration: none; }
+.pr-banner .pr-subtitle {
+  color: #d9a441;
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 4px;
+}
+.pr-blink { animation: pr-blinker 1.1s step-start infinite; }
+@keyframes pr-blinker { 50% { opacity: 0; } }
+.pr-sparkle { color: #f2e0b8; text-shadow: 0 0 6px #f2e0b8, 0 0 12px #c1502e; }
+
+/* ===== nav bar ===== */
+.pr-navtable { width: 100%; border-collapse: collapse; background: #241a11; }
+.pr-navtable td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid #5c4327;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+.pr-navtable a { color: #d9a441; text-decoration: none; }
+.pr-navtable a:hover { color: #f2e0b8; text-decoration: underline; }
+
+/* ===== main layout ===== */
+.pr-maintable { width: 100%; border-collapse: collapse; }
+.pr-maintable > tbody > tr > td { vertical-align: top; padding: 14px; }
+.pr-sidebar { width: 200px; background: #2c2013; border-right: 3px ridge #8a6a42; }
+.pr-content { background: #241a11; }
+
+/* ===== sidebar widgets ===== */
+.pr-widget { background: #1c130c; border: 2px inset #6b4f2c; margin-bottom: 16px; padding: 8px; font-size: 12px; }
+.pr-widget h3 {
+  background: #7a3b23;
+  color: #f2e0b8;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  margin: -8px -8px 8px -8px;
+  padding: 4px 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pr-widget p, .pr-widget li { color: #cfa15a; margin: 4px 0; }
+.pr-widget ul { padding-left: 18px; margin: 4px 0; }
+.pr-counter {
+  background: #100b06;
+  color: #d9a441;
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  letter-spacing: 4px;
+  text-align: center;
+  border: 2px inset #6b4f2c;
+  padding: 4px;
+}
+.pr-underconstruction {
+  background: repeating-linear-gradient(45deg, #d9a441, #d9a441 10px, #241a11 10px, #241a11 20px);
+  color: #241a11;
+  font-weight: bold;
+  text-align: center;
+  padding: 6px 2px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  border: 2px solid #241a11;
+}
+.pr-badge {
+  display: inline-block;
+  background: #100b06;
+  border: 1px solid #c1502e;
+  color: #d9a441;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  padding: 3px 5px;
+  margin: 2px;
+}
+
+/* ===== posts ===== */
+.pr-post { background: #1c130c; border: 2px groove #6b4f2c; margin-bottom: 22px; }
+.pr-post-header { position: relative; height: 170px; overflow: hidden; border-bottom: 3px double #c1502e; }
+.pr-post-header img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pr-post-title-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  right: 12px;
+  font-family: "Courier New", monospace;
+  font-size: 22px;
+  color: #f2e0b8;
+  text-shadow: 2px 2px 0 #1c0f08, -1px -1px 0 #1c0f08, 0 0 10px #c1502e;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.pr-post-meta-overlay {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: #1c0f08;
+  color: #d9a441;
+  font-family: "Courier New", monospace;
+  font-size: 10px;
+  padding: 2px 6px;
+  border: 1px solid #d9a441;
+}
+.pr-post-body { padding: 12px 14px 6px 14px; color: #dcc19a; line-height: 1.5; }
+.pr-post-body .pr-byline { color: #d9a441; font-size: 12px; font-family: "Courier New", monospace; margin-bottom: 10px; display: block; }
+.pr-post-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 14px 10px 14px;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  color: #8a6a42;
+  border-top: 1px dashed #4a3a28;
+}
+.pr-post-footer a { color: #cfa15a; }
+
+/* ===== CSS-illustrated scenes (used when no photo is uploaded) ===== */
+.pr-scene { position: absolute; inset: 0; }
+.pr-scene-sunset { background: linear-gradient(180deg, #f2a154 0%, #d9682e 30%, #8a3a24 60%, #3d1f16 100%); }
+.pr-scene-sunset .pr-sun { position: absolute; left: 50%; top: 55%; width: 70px; height: 70px; background: #ffdd9e; border-radius: 50%; transform: translate(-50%,-50%); box-shadow: 0 0 40px 10px #f2b563; }
+.pr-scene-sunset .pr-ground { position: absolute; bottom: 0; left: 0; right: 0; height: 34%; background: #2a1710; clip-path: polygon(0 55%, 12% 30%, 22% 48%, 38% 15%, 50% 40%, 68% 20%, 82% 45%, 100% 25%, 100% 100%, 0 100%); }
+
+.pr-scene-fire { background: linear-gradient(180deg, #1c1410 0%, #3a2216 55%, #4a2412 100%); }
+.pr-scene-fire .pr-glow { position: absolute; left: 50%; bottom: 20%; width: 160px; height: 90px; transform: translateX(-50%); background: radial-gradient(circle, #f2b563 0%, #d9682e 40%, transparent 70%); filter: blur(2px); }
+.pr-scene-fire .pr-silhouette { position: absolute; bottom: 0; left: 0; right: 0; height: 45%; background: #17100a; clip-path: polygon(0 100%, 0 60%, 10% 50%, 18% 65%, 30% 40%, 42% 60%, 50% 30%, 60% 55%, 72% 45%, 85% 62%, 100% 50%, 100% 100%); }
+
+.pr-scene-storm { background: linear-gradient(180deg, #b98a52 0%, #8a5f34 45%, #4a3320 100%); }
+.pr-scene-storm .pr-dust {
+  position: absolute; top: 0; left: 0; right: 0; bottom: 25%;
+  background:
+    repeating-linear-gradient(100deg, rgba(214,178,120,0.35) 0 30px, rgba(120,84,48,0.15) 30px 70px),
+    repeating-linear-gradient(95deg, rgba(60,40,20,0.25) 0 18px, transparent 18px 60px);
+}
+.pr-scene-storm .pr-ground { position: absolute; bottom: 0; left: 0; right: 0; height: 25%; background: #3a2818; }
+
+.pr-scene-harvest { background: linear-gradient(180deg, #c9dce8 0%, #e8d3a0 55%, #b98a3e 100%); }
+.pr-scene-harvest .pr-field { position: absolute; bottom: 0; left: 0; right: 0; height: 55%; background: repeating-linear-gradient(90deg, #d9a441, #d9a441 8px, #b9822e 8px, #b9822e 16px); clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%); }
+.pr-scene-harvest .pr-sun2 { position: absolute; right: 15%; top: 15%; width: 40px; height: 40px; background: #fff0cc; border-radius: 50%; box-shadow: 0 0 25px 8px #f2d9a0; }
+
+/* ===== footer ===== */
+.pr-footer { text-align: center; padding: 14px; font-family: "Courier New", monospace; font-size: 11px; color: #8a6a42; border-top: 3px double #c1502e; }
+.pr-footer .pr-browserbadges { margin-top: 6px; }
+.pr-footer .pr-browserbadges span { display: inline-block; background: #1c130c; border: 1px solid #d9a441; color: #d9a441; padding: 2px 6px; margin: 2px; font-size: 10px; }
+
+/* ===== forms (guestbook, admin) ===== */
+.pr-field { margin-bottom: 12px; }
+.pr-field label { display: block; font-family: "Courier New", monospace; font-size: 12px; color: #d9a441; margin-bottom: 4px; }
+.pr-field input, .pr-field textarea, .pr-field select {
+  width: 100%;
+  background: #100b06;
+  border: 2px inset #6b4f2c;
+  color: #f2e0b8;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 14px;
+  padding: 6px 8px;
+}
+.pr-field textarea { resize: vertical; min-height: 80px; }
+.pr-button {
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  background: #7a3b23;
+  color: #f2e0b8;
+  border: 2px outset #b96a3e;
+  padding: 8px 16px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.pr-button:hover { background: #8a4429; }
+.pr-button:active { border-style: inset; }
+.pr-button.pr-button-danger { background: #4a1c14; border-color: #7a3324; }
+.pr-error { color: #ff8866; font-family: "Courier New", monospace; font-size: 12px; margin: 8px 0; }
+.pr-success { color: #9fd96b; font-family: "Courier New", monospace; font-size: 12px; margin: 8px 0; }
+
+.pr-guestbook-entry { border-bottom: 1px dashed #4a3a28; padding: 10px 0; }
+.pr-guestbook-entry .pr-byline { display: block; color: #d9a441; font-family: "Courier New", monospace; font-size: 12px; margin-bottom: 4px; }
+
+.pr-admin-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+.pr-admin-table th, .pr-admin-table td { border: 1px solid #4a3a28; padding: 6px 8px; text-align: left; font-size: 13px; color: #dcc19a; }
+.pr-admin-table th { background: #2c2013; color: #d9a441; font-family: "Courier New", monospace; font-size: 11px; text-transform: uppercase; }
